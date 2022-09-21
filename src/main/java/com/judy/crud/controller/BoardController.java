@@ -61,7 +61,7 @@ public class BoardController {
     @PostMapping("/board/update/{id}")
     public String boardUpdate(@PathVariable("id") Long id, Board board, Model model) {
 
-        Board updatedBoard = boardService.boardDetail(id); // 기존 작성 내용 담아오기
+        Board updatedBoard = boardService.boardDetail(id);
         updatedBoard.setTitle(board.getTitle());
         updatedBoard.setContent(board.getContent());
 
