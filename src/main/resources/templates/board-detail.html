@@ -16,11 +16,6 @@
 
     <div class="container">
         <h1 th:text="${boardDetail.title}">제목입니다.</h1>
-
-<!--        <div class="image-section">-->
-<!--        </div>-->
-
-<!--        <a th:href="@{${boardDetail.filePath}">파일 보기</a>-->
         <p th:text="${boardDetail.content}">내용이 들어갑니다.</p>
         <p th:text="${boardDetail.createdAt}">작성시간이 들어갑니다.</p>
         <a th:href="@{/board/delete(id=${boardDetail.id})}">삭제하기</a>
