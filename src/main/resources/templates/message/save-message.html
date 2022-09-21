@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>글 작성 완료 메시지</title>
+</head>
+<script th:inline="javascript">
+
+    // 글이 작성되었습니다.
+    let saveMessage = [[${saveMessage}]];
+    alert(saveMessage);
+
+    location.replace([[${boardListUrl}]]);
+
+</script>
+<body>
+
+</body>
+</html>

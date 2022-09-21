@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>글 삭제 완료 메시지</title>
+</head>
+<script th:inline="javascript">
+
+    // 글이 삭제되었습니다.
+    let deleteMessage = [[${deleteMessage}]];
+    alert(deleteMessage);
+
+    location.replace([[${boardListUrl}]]);
+
+</script>
+<body>
+
+</body>
+</html>

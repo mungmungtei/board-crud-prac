@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시물 작성 폼</title>
+</head>
+
+<style>
+
+    .container {
+        width: 500px;
+        margin: 40px auto 0;
+    }
+
+    .container input {
+        width: 100%;
+        height: 30px;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+    .container textarea {
+        width: 100%;
+        height: 300px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <form action="/board/show" method="post" enctype="multipart/form-data">
+            <input name="title" type="text">
+            <textarea name="content"></textarea>
+<!--            <input name="file" type="file">-->
+            <button type="submit">작성하기</button>
+        </form>
+    </div>
+
+</body>
+</html>

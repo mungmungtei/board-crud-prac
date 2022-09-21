@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세 페이지</title>
+</head>
+<style>
+
+    .container {
+        width: 500px;
+        margin: 40px auto 0;
+    }
+
+</style>
+<body>
+
+    <div class="container">
+        <h1 th:text="${boardDetail.title}">제목입니다.</h1>
+
+<!--        <div class="image-section">-->
+<!--            <img class="today-image" src='/files/인생명품글귀.png'>-->
+<!--        </div>-->
+
+<!--        <a th:href="@{${boardDetail.filePath}">파일 보기</a>-->
+        <p th:text="${boardDetail.content}">내용이 들어갑니다.</p>
+        <p th:text="${boardDetail.createdAt}">작성시간이 들어갑니다.</p>
+        <a th:href="@{/board/delete(id=${boardDetail.id})}">삭제하기</a>
+        <br/><br/>
+        <a th:href="@{/board/update/{id}(id=${boardDetail.id})}">수정하기</a>
+    </div>
+
+</body>
+</html>
